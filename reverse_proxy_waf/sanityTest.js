@@ -1,7 +1,6 @@
 'use strict';
 
 var path = 'http://localhost:3001/';
-//var casper = require('casper').create();
 
 casper.test.begin('WAF Test', 3, function suite(test) {
 
