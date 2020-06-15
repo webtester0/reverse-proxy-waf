@@ -37,10 +37,46 @@ In directory reverse_proxy_waf you can find the sanityTest.js and run it by usin
 git clone https://github.com/webtester0/reverse-proxy-waf.git
 cd reverse_proxy_waf/
 npm i
-node waf.js (waf will run on 3001 port)
 cd mock_server/
 npm i
-cd bin 
-node www (vulnerable web server will run on 3000 port)
 ```
+
+## Usage 
+
+To start reverse-proxy-waf use commands below and it will run on http://localhost:3001 :
+
+```
+cd reverse_proxy_waf/
+node waf.js 
+```
+
+To start vulnerable web server use commands below and express server will run on http://localhost:3000 :
+
+```
+cd mock_server/
+cd bin/
+node www
+```
+
+## Examples
+
+### Reflected XSS
+
+In browser URL bar:
+
+![](https://i.paste.pics/0319a9f7d6acc030986c908fc0688834.png)
+
+Reflected XSS detected by WAF:
+
+![](https://i.paste.pics/fb88ee242e110f7b916c12d4483bcaff.png)
+
+### Stored XSS
+
+Conducting (provide)/(execute) a persistent XSS by injecting a script inside request body.
+
+![](https://i.paste.pics/cb25882919e4f2f616a319653355dc06.png)
+
+Stored XSS detected by WAF:
+
+![](https://i.paste.pics/16c9b6512441ab885a53c585d44ee6de.png)
 
