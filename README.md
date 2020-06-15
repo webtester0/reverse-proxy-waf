@@ -72,7 +72,7 @@ Reflected XSS detected by WAF:
 
 ### Stored XSS
 
-Conducting (provide)/(execute) a persistent XSS by injecting a script inside request body.
+Execution a persistent XSS by injecting a script inside request body.
 
 ![](https://i.paste.pics/cb25882919e4f2f616a319653355dc06.png)
 
