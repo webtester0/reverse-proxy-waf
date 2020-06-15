@@ -1,6 +1,7 @@
 # Reverse proxy web application firewall prototype
 
 `waf.js` is a reverse proxy web application firewall (WAF).
+
 This WAF is built by using Node.js. Technically the WAF connects to the destination server by providing IP and Port of destination.
 
 The WAF intercepts the incoming traffic,detects and prevent XSS.
@@ -20,21 +21,22 @@ Set X-XSS-Protection header to 1 for browser protection.
 ### Enviroment
 It's a prototype of WAF and mock of vulnerable web server. 
 
-The web server is a XSS vulnerable server built using Node.js and Express.The user can attack the server with Reflected and Stored XSS.
-The server uses mongo DB to store user data.
+Web server is a XSS vulnerable server built using Node.js and Express.
+The user can attack the server with Reflected and Stored XSS. This server uses mongo DB to store user data.
 
 So you can test the efficiency and perfomance of working this WAF.
 
-In directory reverse_proxy_waf you can find the sanityTest.js and run it by using this command `casperjs test sanityTest.js`.
+In directory reverse_proxy_waf you can find the sanityTest.js and run it by using this command 
+`casperjs test sanityTest.js`.
 
 ## Installation
 
 ```
 git clone https://github.com/webtester0/reverse-proxy-waf.git
-cd reverse_proxy_waf.js
+cd reverse_proxy_waf/
 npm i
 node waf.js (waf will run on 3001 port)
-cd mock_server
+cd mock_server/
 npm i
 cd bin 
 node www (vulnerable web server will run on 3000 port)
