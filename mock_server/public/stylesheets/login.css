@@ -1,0 +1,30 @@
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+
+h4{
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+
+}
+.my-form{
+    background-color: #c3c3c3;
+    padding: 30px;
+}
+.btn{
+    padding: 5px 10px;
+    margin: 0 5px;
+}

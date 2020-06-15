@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    nav.navbar.navbar-dark.bg-primary
+        a.navbar-brand Express Demo Server
+    div#main
+        div#search(data-x= query )
+        h2 Results:
+        #userList
+            table
+                thead
+                    th UserName
+                    th Email
+                    th fullname
+                    th age
+                    th location
+                    th gender
+                tbody
+
+
+    script(src="/javascripts/global2.js")

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    nav.navbar.navbar-dark.bg-primary
+        a.navbar-brand Express Demo Server
+    div.main
+        div.my-form
+            h4 Signup
+            form
+                div.form-group
+                    label(for="usernameInput") Username
+                    input.form-control#usernameInput(type="text")
+                div.form-group
+                    label(for="passwordInput") Password
+                    input.form-control#passwordInput(type="password")
+                div.form-group
+                    button(type="button").btn.btn-danger#signup Signup
+                div.form-group
+                    p#help1.text-danger Please Enter Unique Username
+                    p#help2.text-danger Please Enter Valid Username/Password
+    script(src="/javascripts/signup.js")

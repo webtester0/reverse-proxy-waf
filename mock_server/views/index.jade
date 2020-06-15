@@ -1,0 +1,61 @@
+extends layout
+
+block content
+    nav.navbar.navbar-dark.bg-primary
+        a.navbar-brand Express Demo Server
+
+
+    #main
+        #wrapper
+            // USER INFO
+            #userInfo
+                h3 User Info
+                p
+                    strong Name:
+                    |  <span id='userInfoName'></span>
+                    br
+                    strong Age:
+                    |  <span id='userInfoAge'></span>
+                    br
+                    strong Gender:
+                    |  <span id='userInfoGender'></span>
+                    br
+                    strong Location:
+                    |  <span id='userInfoLocation'></span>
+            // /USER INFO
+
+            // USER LIST
+            h3 User List
+            #userList
+                table
+                    thead
+                        th UserName
+                        th Email
+                        th Delete?
+                    tbody
+            // /USER LIST
+
+            // ADD USER
+            h3 Add User
+            #addUser
+                form#addUserForm
+                    input#inputUserName(type='text', placeholder='Username')
+                    input#inputUserEmail(type='text', placeholder='Email')
+                    br
+                    input#inputUserFullname(type='text', placeholder='Full Name')
+                    input#inputUserAge(type='text', placeholder='Age')
+                    br
+                    input#inputUserLocation(type='text', placeholder='Location')
+                    input#inputUserGender(type='text', placeholder='gender')
+                    br
+                    button.btn.btn-primary(type="button")#btnAddUser Add User
+            // /ADD USER
+
+            h3 Search User
+            div#searchUser
+                form(method="get" action="/user")
+                    input(type='text', placeholder='user' name="user")
+                    br
+                    button.btn.btn-primary(type="submit") Search
+    script(src='/javascripts/global.js')
+
