@@ -27,7 +27,6 @@ let sanitizeRequestURL = function (req) {
   let decodeURL = decodeURI(req.url);
   decodeURL = sanitize(decodeURL);
   let newURL = encodeURI(decodeURL);
-  //console.log('newURL: ' + newURL + ' ' + 'typeof = ' + typeof(newURL));
   if (newURL !== prevURL) {
     console.log("Alert! Reflected XSS Detected".error + " Content: " + prevURL);
   }
