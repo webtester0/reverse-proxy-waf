@@ -43,14 +43,14 @@ npm i
 
 ## Usage 
 
-To start reverse-proxy-waf use commands below and it will run on http://localhost:3001 :
+To start reverse-proxy-waf use commands below and it will run on http://localhost:3001:
 
 ```
 cd reverse_proxy_waf/
 node waf.js 
 ```
 
-To start vulnerable web server use commands below and express server will run on http://localhost:3000 :
+To start vulnerable web server use commands below and express server will run on http://localhost:3000:
 
 ```
 cd mock_server/
