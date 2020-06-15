@@ -21,13 +21,15 @@ Set X-XSS-Protection header to 1 for browser protection.
 ### Enviroment
 It's a prototype of WAF and mock of vulnerable web server. 
 
-Web server is a XSS vulnerable server built using Node.js and Express.
+Web server is a XSS vulnerable server built by using Node.js and Express.
 The user can attack the server with Reflected and Stored XSS. This server uses mongo DB to store user data.
 
 So you can test the efficiency and perfomance of working this WAF.
 
 In directory reverse_proxy_waf you can find the sanityTest.js and run it by using this command 
 `casperjs test sanityTest.js`.
+
+![](https://paste.pics/48e4336fa23b73d91d8871ec217c84fc)
 
 ## Installation
 
