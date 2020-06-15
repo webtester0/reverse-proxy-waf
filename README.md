@@ -29,7 +29,7 @@ So you can test the efficiency and perfomance of working this WAF.
 In directory reverse_proxy_waf you can find the sanityTest.js and run it by using this command 
 `casperjs test sanityTest.js`.
 
-![](https://paste.pics/48e4336fa23b73d91d8871ec217c84fc)
+![](https://i.paste.pics/48e4336fa23b73d91d8871ec217c84fc.png)
 
 ## Installation
 
