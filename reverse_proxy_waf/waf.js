@@ -140,7 +140,7 @@ let sanitizeURLParamsJSON = function (content) {
   return newContent;
 };
 
-let req_body_decorator = function (bodyContent, srcReq) {
+let reqBodyDecorator = function (bodyContent, srcReq) {
   let method = srcReq["method"];
   let content;
   if (method === "GET") {
@@ -165,15 +165,15 @@ let req_body_decorator = function (bodyContent, srcReq) {
     return Buffer.from(content, "utf-8");
   }
 };
-req_options_decorator = function (proxyReqOpts) {
+reqOptionsDecorator = function (proxyReqOpts) {
   return proxyReqOpts;
 };
 
-let res_decorator = function (proxyRes, proxyResData) {
+let resDecorator = function (proxyRes, proxyResData) {
   return proxyResData;
 };
 
-let res_head_decorator = function (headers) {
+let resHeadDecorator = function (headers) {
   headers["X-XSS-Protection"] = "1";
   return headers;
 };
@@ -184,10 +184,10 @@ app.use(
     proxyReqPathResolver: sanitizeRequestURL,
     filter: filterRequests,
     // default
-    userResDecorator: res_decorator,
-    userResHeaderDecorator: res_head_decorator,
-    proxyReqBodyDecorator: req_body_decorator,
-    proxyReqOptDecorator: req_options_decorator,
+    userResDecorator: resDecorator,
+    userResHeaderDecorator: resHeadDecorator,
+    proxyReqBodyDecorator: reqBodyDecorator,
+    proxyReqOptDecorator: reqOptionsDecorator,
     parseReqBody: true,
     memoizeHost: false,
     preserveHostHdr: true,
