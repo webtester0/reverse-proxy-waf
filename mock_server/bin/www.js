@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 let debug = require('debug')('my-application');
 let app = require('../app');
 
