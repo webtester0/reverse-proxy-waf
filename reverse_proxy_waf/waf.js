@@ -122,7 +122,6 @@ let sanitizeURLParams = function (content) {
   return newContent;
 };
 
-
 let sanitizeURLParamsJSON = function (content) {
   let prevContent = content;
   content = JSON.parse(content);
@@ -194,7 +193,6 @@ app.use(
     reqAsBuffer: true,
   })
 );
-
 
 const port = 3001;
 
