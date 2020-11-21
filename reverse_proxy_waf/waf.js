@@ -179,7 +179,7 @@ let resHeadDecorator = function (headers) {
 
 app.use(
   "/",
-  proxy("127.0.0.1:3000", {
+  proxy("http://server:3000", {
     proxyReqPathResolver: sanitizeRequestURL,
     filter: filterRequests,
     // default
@@ -197,5 +197,5 @@ app.use(
 const port = 3001;
 
 app.listen(port, () =>
-  console.log(`Reverse-proxy-waf listening at http://localhost:${port}`)
+  console.log(`Reverse-proxy-waf listening at http://0.0.0.0:${port}`)
 );
