@@ -197,5 +197,5 @@ app.use(
 const port = 3001;
 
 app.listen(port, () =>
-  console.log(`Reverse-proxy-waf listening at http://0.0.0.0:${port}`)
+  console.log(`Reverse-proxy-waf listening at http://localhost:${port}`)
 );
