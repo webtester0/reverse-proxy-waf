@@ -1,22 +1,36 @@
 version: '3.1'
 
-networks:
-    test:
-        driver: bridge
+# networks: 
+#     test:
+#         driver: bridge
 
 services:
     server:
-        image: server:latest
+        image: server:v01
         ports: 
            - "3000:3000"
-        networks:
-            - test
-
+        depends_on: 
+            - mongo
+        # networks:
+        #     - test
     waf:
-        image: waf:latest
+        image: waf:v01
         ports: 
           - "3001:3001"
-        networks:
-            - test
+        depends_on: 
+            - server
+        # networks:
+        #     - test
+    mongo:
+        image: mongo:4.4.2
+        volumes: 
+           - mongodata:/data/db
+        ports:
+          - "27017:27017"
+        # networks:
+        #     - test
+
+volumes: 
+    mongodata:
 
 
