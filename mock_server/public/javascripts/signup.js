@@ -24,7 +24,7 @@ $(document).ready(function () {
                 dataType: "json",
                 data:JSON.stringify({password:password, username: username}),
             }).done(function (msg) {
-                alert("User Signed Up");
+                alert("User Signed Up!");
                 location.href = "http://localhost:3001"
             });
         }
